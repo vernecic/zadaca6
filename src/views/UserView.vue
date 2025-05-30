@@ -93,9 +93,9 @@ const izbrisiKorisnika = () => {
   error.value = false;
   errorPoruka.value = "";
 
-  if (!password.value) {
+  if (!password.value || !email.value) {
     error.value = true;
-    errorPoruka.value = "Potrebna je lozinka!";
+    errorPoruka.value = "Ispunite sva polja!";
     return;
   }
 
